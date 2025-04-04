@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flask-helloworld
+  name: flask-helloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-helloworld
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: flask-helloworld
+    spec:
+      containers:
+      - image: asnashameel/flask-helloworld:latest
+        name: flask-helloworld
+        resources: {}
+status: {}
